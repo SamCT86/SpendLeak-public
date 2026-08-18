@@ -1,13 +1,24 @@
 # SpendLeak
 
-**Paid Traffic Integrity Assurance for performance teams.**
+**PPC destination audit for performance agencies.**
 
-SpendLeak is a focused, one-off audit that helps agencies and marketing teams verify where paid-traffic destinations actually resolve, capture what changed, and leave with a reviewed, client-forwardable record.
+Before you own the result, verify where the paid traffic lands.
+
+SpendLeak checks up to 50 paid destinations, captures evidence of what each path actually reaches, keeps supplied context separate from observed evidence, and delivers a human-reviewed, client-forwardable report with one eligible follow-up comparison after remediation.
 
 **Live product:** https://spendleak.co.uk  
 **Sample report:** https://spendleak.co.uk/sample-report
 
-## Product contract
+## When it is useful
+
+SpendLeak is designed for moments where a performance team needs a dated, defensible view of the post-click path before responsibility becomes ambiguous:
+
+- taking over a new paid-media client
+- site migration, relaunch or major web change
+- landing-page or destination changes
+- unexplained performance drops or destination incidents
+
+## What the audit includes
 
 - one brand/domain per audit
 - up to 50 paid destinations
@@ -16,42 +27,38 @@ SpendLeak is a focused, one-off audit that helps agencies and marketing teams ve
 - reviewed findings before delivery
 - prioritised actions in a frozen report
 - one eligible follow-up comparison after remediation
+- no Google Ads login or ad-account write access required for the core audit
 - £199 GBP one-off
-- no ad-account write access
 - no recurring monitoring subscription
 
-Typical use cases include paid-media account takeovers, site migrations, launches, landing-page changes and unexplained performance drops where teams need a dated view of what happened after the click.
+The live product is always the authority for current scope, price, availability and customer-facing terms.
+
+## How SpendLeak treats evidence
+
+The operating principle is simple: **observe first, conclude second.**
+
+Machine-collected destination evidence, customer-supplied context and reviewed findings are deliberately kept as separate stages. Delivered reports are frozen records of a specific audit state; a follow-up creates a comparison rather than rewriting the original evidence.
+
+See [`docs/architecture.md`](docs/architecture.md) for the high-level system boundary.
 
 ## What this public repository is
 
-This repository is the **public product and engineering surface** for SpendLeak. It exists to make the product, architecture and engineering approach inspectable without publishing the proprietary production implementation.
+This repository is SpendLeak's **public product and engineering surface**. It exists so customers, collaborators and technical reviewers can understand the product, its evidence model and the engineering principles behind it without exposing the proprietary production implementation.
 
-The production source repository, infrastructure configuration, provider integrations, operational workflows, database implementation and internal runbooks remain private by design.
+The production source repository, infrastructure configuration, provider integrations, database implementation, internal workflows and operational runbooks remain private by design.
 
 That boundary is intentional: **publicly understandable, privately defensible.**
 
-## Engineering overview
+## Public engineering docs
 
-SpendLeak is built as a small production system rather than a static landing page. At a high level it includes:
+- [`docs/architecture.md`](docs/architecture.md) — system boundaries and product flow
+- [`docs/engineering-principles.md`](docs/engineering-principles.md) — reliability and evidence principles
+- [`STATUS.md`](STATUS.md) — current public product/engineering boundary
+- [`SECURITY.md`](SECURITY.md) — security reporting guidance
+- [`CHANGELOG.md`](CHANGELOG.md) — high-level public milestones
 
-- a customer-facing web and checkout flow
-- bounded audit intake and destination evidence collection
-- explicit separation between machine observation and human judgement
-- reviewed/frozen report generation
-- private report delivery
-- a bounded follow-up/recheck path
-- fail-closed operational and provider-state handling
+## Source availability
 
-See [`docs/architecture.md`](docs/architecture.md) and [`docs/engineering-principles.md`](docs/engineering-principles.md).
-
-## Current status
-
-SpendLeak is live. Checkout availability, current price and product terms are always governed by the live product rather than this repository.
-
-See [`STATUS.md`](STATUS.md) for the public status boundary.
-
-## Repository policy
-
-This is **not an open-source distribution of the production application**. No license to proprietary SpendLeak source code, private infrastructure or internal implementation is granted by this repository.
+This is **not an open-source distribution of the SpendLeak production application**. Publication of these documents does not make the private implementation, infrastructure or operating materials public.
 
 Security reports should not include secrets or personal data in public issues. See [`SECURITY.md`](SECURITY.md).
