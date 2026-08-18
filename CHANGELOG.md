@@ -2,6 +2,14 @@
 
 This changelog records **high-level product and engineering milestones** suitable for public review. It intentionally omits private repository history, internal identifiers, security-sensitive implementation and commercial pipeline details.
 
+## 2026-08-18 — Public repository positioning pass
+
+- rewrote the README around plain buyer language rather than category jargon
+- made the primary use cases and audit deliverable explicit
+- clarified the observation → review → frozen-report evidence model
+- kept current commercial terms subordinate to the live product as source of truth
+- preserved the public/private boundary without exposing production implementation details
+
 ## 2026-08 — Paid Traffic Integrity Assurance launch baseline
 
 ### Product contract
